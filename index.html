@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+   
+<link rel="stylesheet" href="sws.css">
+
+<script src="sw.js"></script>
+
+<link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+
+    <div thumbsSlider="" class=" thumbsSlider  swiper mySwiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <img src="1.png" />
+        </div>
+        <div class="swiper-slide">
+          <img src="1.png" />
+        </div>
+        <div class="swiper-slide">
+          <img src="1.png" />
+        </div>
+        <div class="swiper-slide">
+          <img src="1.png" />
+        </div>
+        <div class="swiper-slide">
+          <img src="1.png" />
+        </div>
+        <div class="swiper-slide">
+          <img src="1.png" />
+        </div>
+        <div class="swiper-slide">
+          <img src="1.png" />
+        </div>
+        <div class="swiper-slide">
+          <img src="1.png" />
+        </div>
+        <div class="swiper-slide">
+          <img src="1.png" />
+        </div>
+        <div class="swiper-slide">
+          <img src="1.png" />
+        </div>
+      </div>
+    </div>
+
+
+    <div class="main_swip swiper mySwiper2">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <img src="1.png" />
+          <span>1</span>
+        </div>
+        <div class="swiper-slide">
+          <img src="1.png" />
+          <span>2</span>
+        </div>
+        <div class="swiper-slide">
+          <img src="1.png" />
+          <span>3</span>
+        </div>
+        <div class="swiper-slide">
+          <img src="1.png" />
+          <span>4</span>
+        </div>
+        <div class="swiper-slide">
+          <img src="1.png" />
+          <span>5</span>
+        </div>
+        <div class="swiper-slide">
+          <img src="1.png" />
+          <span>6</span>
+        </div>
+        <div class="swiper-slide">
+          <img src="1.png" />
+          <span>7</span>
+        </div>
+        <div class="swiper-slide">
+          <img src="1.png" />
+          <span>8</span>
+        </div>
+        <div class="swiper-slide">
+          <img src="1.png" />
+          <span>9</span>
+        </div>
+        <div class="swiper-slide">
+          <img src="1.png" />
+          <span>10</span>
+        </div>
+      </div>
+    </div>
+
+
+    <script>
+      var swiper = new Swiper(".mySwiper", {
+        spaceBetween: 10,
+        slidesPerView: "auto",
+        freeMode: true,
+        watchSlidesProgress: true,
+      });
+      var swiper2 = new Swiper(".mySwiper2", {
+      
+        direction: "vertical",
+        loop: true,
+        thumbs: {
+          swiper: swiper,
+        },
+      });
+
+
+      var box = document.querySelectorAll(".thumbsSlider .swiper-slide");
+      var mainbox = document.querySelector(".main_swip");
+
+      box.forEach((item) => {
+            item.addEventListener("click", function() {
+              mainbox.classList.add("active");
+            });
+          });
+
+   
+    </script>
+
+    
+
+    <!-- <button class="run" id="confetti">Run</button> -->
+
+    <!-- <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js"></script> -->
+    <script>
+      // confetti({
+      //   particleCount: 100,
+      //   spread: 60,
+      //   angle: 70,
+      //   origin: { y: 0.95, x: 0 },
+      // });
+    </script>
+  </body>
+</html>
